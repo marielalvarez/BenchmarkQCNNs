@@ -1,0 +1,71 @@
+{
+  "experiment_id": "E1_FINITE_SHOTS",
+  "winner_model": "wei",
+  "include_cong": false,
+  "canonical_hash": "c2ee95d45e65",
+  "config": {
+    "datasets": [
+      {
+        "class_neg": 6,
+        "class_pos": 4,
+        "name": "coat_vs_shirt",
+        "source": "fashion_mnist"
+      },
+      {
+        "class_neg": 9,
+        "class_pos": 4,
+        "name": "4_vs_9",
+        "source": "mnist"
+      },
+      {
+        "class_neg": 0,
+        "class_pos": 1,
+        "name": "1_vs_0",
+        "source": "mnist"
+      }
+    ],
+    "description": "¿Cómo se degrada (o no) la exactitud de WINNER_MODEL (y de Cong, si INCLUDE_CONG_IN_E1_E2) al pasar del simulador analítico de E0 a medición por shots finitos, sin ruido de hardware todavía? Compara los tres presupuestos de shots entre sí (no modelos entre sí) sobre los mismos tres datasets y el mismo protocolo de entrenamiento -- el ruido de muestreo también afecta al gradiente durante el entrenamiento, no solo a la exactitud de prueba (ver qcnn_benchmark.execution.shots).\n",
+    "experiment_id": "E1_FINITE_SHOTS",
+    "models": [
+      "wei"
+    ],
+    "n_seeds": 5,
+    "protocol": {
+      "batch_size": 25,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip_norm": 5.0,
+      "learning_rate": 0.01,
+      "min_delta": 0.0001,
+      "n_updates": 500,
+      "patience_checks": 5,
+      "val_check_every": 10
+    },
+    "sample_seed": 20260802,
+    "seed_root": 0,
+    "shots_budgets": [
+      256,
+      1024,
+      4096
+    ],
+    "statistical_criterion": {
+      "aggregation": "mean_per_dataset",
+      "alpha": 0.05,
+      "ci_method": "bootstrap_bca",
+      "comparison_test": "paired_sign_permutation",
+      "confidence_level": 0.95,
+      "multiple_comparison_correction": "holm",
+      "n_bootstrap": 10000
+    }
+  },
+  "fast_smoke_test": false,
+  "timestamp_utc": "2026-09-17T03:47:59.880968+00:00",
+  "raw_results_path": "../results/e1_raw_c2ee95d45e65.csv",
+  "package_versions": {
+    "pennylane": "0.45.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "scikit_learn": "1.7.2",
+    "pandas": "3.0.5"
+  }
+}

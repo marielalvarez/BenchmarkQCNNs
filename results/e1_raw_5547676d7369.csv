@@ -1,0 +1,5 @@
+dataset,model,n_shots,seed,train_acc,test_acc,test_tp,test_fp,test_fn,test_tn,n_updates_run,stopped_early_at,best_val_loss
+coat_vs_shirt,hur,256,0,0.698,0.721,353,129,147,371,210,210,0.615932394735333
+coat_vs_shirt,hur,256,1,0.711,0.732,374,151,126,349,190,190,0.5810522268842976
+coat_vs_shirt,hur,256,2,0.7,0.697,414,231,86,269,250,250,0.6135278067789646
+coat_vs_shirt,hur,256,3,0.695,0.696,379,170,121,330,250,250,0.6148961831633649

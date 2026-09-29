@@ -1,0 +1,67 @@
+{
+  "experiment_id": "E0_QUANTUM_ADVANTAGE",
+  "winner_model": "wei",
+  "cnn_analoga_model": "cnn_wei_analoga",
+  "canonical_hash": "12aaded3bf0b",
+  "config": {
+    "datasets": [
+      {
+        "class_neg": 6,
+        "class_pos": 4,
+        "name": "coat_vs_shirt",
+        "source": "fashion_mnist"
+      },
+      {
+        "class_neg": 9,
+        "class_pos": 4,
+        "name": "4_vs_9",
+        "source": "mnist"
+      },
+      {
+        "class_neg": 0,
+        "class_pos": 1,
+        "name": "1_vs_0",
+        "source": "mnist"
+      }
+    ],
+    "description": "¿El QCNN ganador de E0A supera a una CNN clásica con conteo de parámetros comparable? Resultado informativo para la narrativa de Quantum Advantage del paper -- no alimenta ninguna decisión de E0B/E1/E2 (esas fases usan WINNER_MODEL directamente, no el resultado de esta comparación). Dado lo observado en E0A (n=5 semillas), es esperable que el test de permutación de signo tampoco alcance significancia aquí -- por eso el análisis también reporta solape de IC bootstrap BCa como evidencia complementaria desde el inicio, no como parche posterior.\n",
+    "experiment_id": "E0_QUANTUM_ADVANTAGE",
+    "models": [
+      "wei",
+      "cnn_wei_analoga"
+    ],
+    "n_seeds": 5,
+    "protocol": {
+      "batch_size": 25,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip_norm": 5.0,
+      "learning_rate": 0.01,
+      "min_delta": 0.0001,
+      "n_updates": 500,
+      "patience_checks": 5,
+      "val_check_every": 10
+    },
+    "sample_seed": 20260802,
+    "seed_root": 0,
+    "statistical_criterion": {
+      "aggregation": "mean_per_dataset",
+      "alpha": 0.05,
+      "ci_method": "bootstrap_bca",
+      "comparison_test": "paired_sign_permutation",
+      "confidence_level": 0.95,
+      "multiple_comparison_correction": "holm",
+      "n_bootstrap": 10000
+    }
+  },
+  "fast_smoke_test": false,
+  "timestamp_utc": "2026-09-14T03:25:41.180441+00:00",
+  "raw_results_path": "../results/e0_quantum_advantage_raw_12aaded3bf0b.csv",
+  "package_versions": {
+    "pennylane": "0.45.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "scikit_learn": "1.7.2",
+    "pandas": "3.0.5"
+  }
+}

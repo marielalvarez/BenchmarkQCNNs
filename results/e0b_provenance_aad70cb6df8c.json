@@ -1,0 +1,66 @@
+{
+  "experiment_id": "E0B",
+  "winner_model": "wei",
+  "canonical_hash": "aad70cb6df8c",
+  "config": {
+    "datasets": [
+      {
+        "class_neg": 6,
+        "class_pos": 4,
+        "name": "coat_vs_shirt",
+        "source": "fashion_mnist"
+      },
+      {
+        "class_neg": 9,
+        "class_pos": 4,
+        "name": "4_vs_9",
+        "source": "mnist"
+      },
+      {
+        "class_neg": 0,
+        "class_pos": 1,
+        "name": "1_vs_0",
+        "source": "mnist"
+      }
+    ],
+    "description": "¿WINNER_MODEL (Hur, Wei o Gong, el que haya ganado E0A) supera a la QCNN genérica de Cong et al. (SU4 + Pooling_ansatz1 + AngleEmbedding, sin sesgo de diseño de ningún paper específico)? Este es el sub-experimento de \"validez de la aportación\": si WINNER_MODEL no supera a Cong de forma consistente, la aportación específica de su paper (encoding denso, filtro LCU, encoding tree-hybrid) no se estaría traduciendo en ventaja real sobre una arquitectura QCNN jerárquica genérica.\n",
+    "experiment_id": "E0B",
+    "models": [
+      "wei",
+      "cong"
+    ],
+    "n_seeds": 5,
+    "protocol": {
+      "batch_size": 25,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip_norm": 5.0,
+      "learning_rate": 0.01,
+      "min_delta": 0.0001,
+      "n_updates": 500,
+      "patience_checks": 5,
+      "val_check_every": 10
+    },
+    "sample_seed": 20260802,
+    "seed_root": 0,
+    "statistical_criterion": {
+      "aggregation": "mean_per_dataset",
+      "alpha": 0.05,
+      "ci_method": "bootstrap_bca",
+      "comparison_test": "paired_sign_permutation",
+      "confidence_level": 0.95,
+      "multiple_comparison_correction": "holm",
+      "n_bootstrap": 10000
+    }
+  },
+  "fast_smoke_test": false,
+  "timestamp_utc": "2026-09-14T01:12:34.204004+00:00",
+  "raw_results_path": "../results/e0b_raw_aad70cb6df8c.csv",
+  "package_versions": {
+    "pennylane": "0.45.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "scikit_learn": "1.7.2",
+    "pandas": "3.0.5"
+  }
+}

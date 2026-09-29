@@ -1,0 +1,4 @@
+model,n_wires,total_params,trainable_params
+hur,8,36,36
+wei,10,46,46
+gong,8,36,36

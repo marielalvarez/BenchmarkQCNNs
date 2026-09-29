@@ -1,0 +1,137 @@
+nohup: ignoring input
+MODELS_TO_RUN: ['hur', 'wei', 'gong']
+experiment_id: E1_FINITE_SHOTS
+canonical_hash: 5547676d7369 
+datasets: ['coat_vs_shirt', '4_vs_9', '1_vs_0']
+models: ['hur', 'wei', 'gong']
+shots_budgets: [256, 1024, 4096]
+run_seeds: [0, 1, 2, 3, 4]
+Estimación basada en costo REAL medido por actualización (cota superior, asume 0 early stopping):
+  3 presupuestos de shots x 5 semillas x 3 datasets x 500 actualizaciones x 3 modelo(s)
+  ~524 h (~21.8 dias) combinado
+
+  hur: ~388.8 h (~16.20 dias)
+  wei: ~3.8 h (~0.16 dias)
+  gong: ~131.2 h (~5.47 dias)
+
+En la practica el early stopping reduce esto algo (la corrida ya completada
+de wei detuvo la mayoria de sus corridas antes de las 500 actualizaciones),
+pero no cambia el orden de magnitud: correr esta matriz completa toma dias,
+no horas, para hur y gong.
+canonical_hash: 5547676d7369
+models: ['hur', 'wei', 'gong']
+raw_path: results/e1_raw_5547676d7369.csv
+[coat_vs_shirt-hur-shots256-seed0] update  10/500  train_loss=0.6947  val_loss=0.6774  best_val=0.6774  no_improve=0  t=2582s
+[coat_vs_shirt-hur-shots256-seed0] update  20/500  train_loss=0.6875  val_loss=0.6737  best_val=0.6737  no_improve=0  t=5155s
+[coat_vs_shirt-hur-shots256-seed0] update  30/500  train_loss=0.6910  val_loss=0.6710  best_val=0.6710  no_improve=0  t=7697s
+[coat_vs_shirt-hur-shots256-seed0] update  40/500  train_loss=0.6713  val_loss=0.6654  best_val=0.6654  no_improve=0  t=10226s
+[coat_vs_shirt-hur-shots256-seed0] update  50/500  train_loss=0.6649  val_loss=0.6563  best_val=0.6563  no_improve=0  t=12745s
+[coat_vs_shirt-hur-shots256-seed0] update  60/500  train_loss=0.7068  val_loss=0.6510  best_val=0.6510  no_improve=0  t=15291s
+[coat_vs_shirt-hur-shots256-seed0] update  70/500  train_loss=0.6859  val_loss=0.6517  best_val=0.6510  no_improve=1  t=17808s
+[coat_vs_shirt-hur-shots256-seed0] update  80/500  train_loss=0.6219  val_loss=0.6468  best_val=0.6468  no_improve=0  t=20323s
+[coat_vs_shirt-hur-shots256-seed0] update  90/500  train_loss=0.6183  val_loss=0.6388  best_val=0.6388  no_improve=0  t=22832s
+[coat_vs_shirt-hur-shots256-seed0] update 100/500  train_loss=0.6386  val_loss=0.6400  best_val=0.6388  no_improve=1  t=25343s
+[coat_vs_shirt-hur-shots256-seed0] update 110/500  train_loss=0.6640  val_loss=0.6376  best_val=0.6376  no_improve=0  t=27872s
+[coat_vs_shirt-hur-shots256-seed0] update 120/500  train_loss=0.6520  val_loss=0.6319  best_val=0.6319  no_improve=0  t=30417s
+[coat_vs_shirt-hur-shots256-seed0] update 130/500  train_loss=0.6090  val_loss=0.6274  best_val=0.6274  no_improve=0  t=32949s
+[coat_vs_shirt-hur-shots256-seed0] update 140/500  train_loss=0.6243  val_loss=0.6297  best_val=0.6274  no_improve=1  t=35468s
+[coat_vs_shirt-hur-shots256-seed0] update 150/500  train_loss=0.6554  val_loss=0.6237  best_val=0.6237  no_improve=0  t=37985s
+[coat_vs_shirt-hur-shots256-seed0] update 160/500  train_loss=0.6167  val_loss=0.6159  best_val=0.6159  no_improve=0  t=40507s
+[coat_vs_shirt-hur-shots256-seed0] update 170/500  train_loss=0.5946  val_loss=0.6244  best_val=0.6159  no_improve=1  t=43036s
+[coat_vs_shirt-hur-shots256-seed0] update 180/500  train_loss=0.6213  val_loss=0.6300  best_val=0.6159  no_improve=2  t=45545s
+[coat_vs_shirt-hur-shots256-seed0] update 190/500  train_loss=0.6299  val_loss=0.6246  best_val=0.6159  no_improve=3  t=48065s
+[coat_vs_shirt-hur-shots256-seed0] update 200/500  train_loss=0.6152  val_loss=0.6209  best_val=0.6159  no_improve=4  t=50584s
+[coat_vs_shirt-hur-shots256-seed0] update 210/500  train_loss=0.6124  val_loss=0.6184  best_val=0.6159  no_improve=5  t=53092s
+[coat_vs_shirt-hur-shots256-seed0] Early stopping en la actualización 210 (paciencia=5 chequeos, delta=0.0001).
+[coat_vs_shirt-hur-shots256-seed0] test_acc=0.7210  (t=53197s / 14.8h acumulado)
+[coat_vs_shirt-hur-shots256-seed1] update  10/500  train_loss=0.6507  val_loss=0.6403  best_val=0.6403  no_improve=0  t=2500s
+[coat_vs_shirt-hur-shots256-seed1] update  20/500  train_loss=0.5833  val_loss=0.6318  best_val=0.6318  no_improve=0  t=5013s
+[coat_vs_shirt-hur-shots256-seed1] update  30/500  train_loss=0.6604  val_loss=0.6231  best_val=0.6231  no_improve=0  t=7543s
+[coat_vs_shirt-hur-shots256-seed1] update  40/500  train_loss=0.5786  val_loss=0.6148  best_val=0.6148  no_improve=0  t=10065s
+[coat_vs_shirt-hur-shots256-seed1] update  50/500  train_loss=0.6398  val_loss=0.6280  best_val=0.6148  no_improve=1  t=12585s
+[coat_vs_shirt-hur-shots256-seed1] update  60/500  train_loss=0.6399  val_loss=0.6064  best_val=0.6064  no_improve=0  t=15115s
+[coat_vs_shirt-hur-shots256-seed1] update  70/500  train_loss=0.5351  val_loss=0.6014  best_val=0.6014  no_improve=0  t=17635s
+[coat_vs_shirt-hur-shots256-seed1] update  80/500  train_loss=0.6033  val_loss=0.5943  best_val=0.5943  no_improve=0  t=20155s
+[coat_vs_shirt-hur-shots256-seed1] update  90/500  train_loss=0.6710  val_loss=0.6022  best_val=0.5943  no_improve=1  t=22686s
+[coat_vs_shirt-hur-shots256-seed1] update 100/500  train_loss=0.4419  val_loss=0.5938  best_val=0.5938  no_improve=0  t=25214s
+[coat_vs_shirt-hur-shots256-seed1] update 110/500  train_loss=0.6272  val_loss=0.5962  best_val=0.5938  no_improve=1  t=27743s
+[coat_vs_shirt-hur-shots256-seed1] update 120/500  train_loss=0.5214  val_loss=0.5964  best_val=0.5938  no_improve=2  t=30262s
+[coat_vs_shirt-hur-shots256-seed1] update 130/500  train_loss=0.6182  val_loss=0.5897  best_val=0.5897  no_improve=0  t=32786s
+[coat_vs_shirt-hur-shots256-seed1] update 140/500  train_loss=0.5104  val_loss=0.5811  best_val=0.5811  no_improve=0  t=35326s
+[coat_vs_shirt-hur-shots256-seed1] update 150/500  train_loss=0.5910  val_loss=0.5911  best_val=0.5811  no_improve=1  t=37889s
+[coat_vs_shirt-hur-shots256-seed1] update 160/500  train_loss=0.5857  val_loss=0.5869  best_val=0.5811  no_improve=2  t=40414s
+[coat_vs_shirt-hur-shots256-seed1] update 170/500  train_loss=0.6852  val_loss=0.5855  best_val=0.5811  no_improve=3  t=42930s
+[coat_vs_shirt-hur-shots256-seed1] update 180/500  train_loss=0.5863  val_loss=0.5865  best_val=0.5811  no_improve=4  t=45450s
+[coat_vs_shirt-hur-shots256-seed1] update 190/500  train_loss=0.6516  val_loss=0.5847  best_val=0.5811  no_improve=5  t=47979s
+[coat_vs_shirt-hur-shots256-seed1] Early stopping en la actualización 190 (paciencia=5 chequeos, delta=0.0001).
+[coat_vs_shirt-hur-shots256-seed1] test_acc=0.7320  (t=101276s / 28.1h acumulado)
+[coat_vs_shirt-hur-shots256-seed2] update  10/500  train_loss=0.6829  val_loss=0.7114  best_val=0.7114  no_improve=0  t=2525s
+[coat_vs_shirt-hur-shots256-seed2] update  20/500  train_loss=0.6927  val_loss=0.6821  best_val=0.6821  no_improve=0  t=5051s
+[coat_vs_shirt-hur-shots256-seed2] update  30/500  train_loss=0.6582  val_loss=0.6776  best_val=0.6776  no_improve=0  t=7564s
+[coat_vs_shirt-hur-shots256-seed2] update  40/500  train_loss=0.6757  val_loss=0.6724  best_val=0.6724  no_improve=0  t=10091s
+[coat_vs_shirt-hur-shots256-seed2] update  50/500  train_loss=0.6536  val_loss=0.6653  best_val=0.6653  no_improve=0  t=12619s
+[coat_vs_shirt-hur-shots256-seed2] update  60/500  train_loss=0.6275  val_loss=0.6464  best_val=0.6464  no_improve=0  t=15137s
+[coat_vs_shirt-hur-shots256-seed2] update  70/500  train_loss=0.6567  val_loss=0.6457  best_val=0.6457  no_improve=0  t=17679s
+[coat_vs_shirt-hur-shots256-seed2] update  80/500  train_loss=0.6176  val_loss=0.6373  best_val=0.6373  no_improve=0  t=20206s
+[coat_vs_shirt-hur-shots256-seed2] update  90/500  train_loss=0.6463  val_loss=0.6376  best_val=0.6373  no_improve=1  t=22742s
+[coat_vs_shirt-hur-shots256-seed2] update 100/500  train_loss=0.6976  val_loss=0.6358  best_val=0.6358  no_improve=0  t=25256s
+[coat_vs_shirt-hur-shots256-seed2] update 110/500  train_loss=0.6243  val_loss=0.6289  best_val=0.6289  no_improve=0  t=27771s
+[coat_vs_shirt-hur-shots256-seed2] update 120/500  train_loss=0.6208  val_loss=0.6300  best_val=0.6289  no_improve=1  t=30292s
+[coat_vs_shirt-hur-shots256-seed2] update 130/500  train_loss=0.6224  val_loss=0.6328  best_val=0.6289  no_improve=2  t=32814s
+[coat_vs_shirt-hur-shots256-seed2] update 140/500  train_loss=0.6696  val_loss=0.6283  best_val=0.6283  no_improve=0  t=35318s
+[coat_vs_shirt-hur-shots256-seed2] update 150/500  train_loss=0.6002  val_loss=0.6164  best_val=0.6164  no_improve=0  t=37832s
+[coat_vs_shirt-hur-shots256-seed2] update 160/500  train_loss=0.5997  val_loss=0.6151  best_val=0.6151  no_improve=0  t=40345s
+[coat_vs_shirt-hur-shots256-seed2] update 170/500  train_loss=0.5902  val_loss=0.6253  best_val=0.6151  no_improve=1  t=42858s
+[coat_vs_shirt-hur-shots256-seed2] update 180/500  train_loss=0.5469  val_loss=0.6222  best_val=0.6151  no_improve=2  t=45397s
+[coat_vs_shirt-hur-shots256-seed2] update 190/500  train_loss=0.7048  val_loss=0.6178  best_val=0.6151  no_improve=3  t=47949s
+[coat_vs_shirt-hur-shots256-seed2] update 200/500  train_loss=0.5844  val_loss=0.6135  best_val=0.6135  no_improve=0  t=50469s
+[coat_vs_shirt-hur-shots256-seed2] update 210/500  train_loss=0.6089  val_loss=0.6172  best_val=0.6135  no_improve=1  t=53020s
+[coat_vs_shirt-hur-shots256-seed2] update 220/500  train_loss=0.6161  val_loss=0.6145  best_val=0.6135  no_improve=2  t=55606s
+[coat_vs_shirt-hur-shots256-seed2] update 230/500  train_loss=0.6060  val_loss=0.6173  best_val=0.6135  no_improve=3  t=58192s
+[coat_vs_shirt-hur-shots256-seed2] update 240/500  train_loss=0.5712  val_loss=0.6176  best_val=0.6135  no_improve=4  t=60740s
+[coat_vs_shirt-hur-shots256-seed2] update 250/500  train_loss=0.5779  val_loss=0.6140  best_val=0.6135  no_improve=5  t=63255s
+[coat_vs_shirt-hur-shots256-seed2] Early stopping en la actualización 250 (paciencia=5 chequeos, delta=0.0001).
+[coat_vs_shirt-hur-shots256-seed2] test_acc=0.6970  (t=164630s / 45.7h acumulado)
+[coat_vs_shirt-hur-shots256-seed3] update  10/500  train_loss=0.6975  val_loss=0.6663  best_val=0.6663  no_improve=0  t=2515s
+[coat_vs_shirt-hur-shots256-seed3] update  20/500  train_loss=0.6422  val_loss=0.6612  best_val=0.6612  no_improve=0  t=5035s
+[coat_vs_shirt-hur-shots256-seed3] update  30/500  train_loss=0.6603  val_loss=0.6478  best_val=0.6478  no_improve=0  t=7553s
+[coat_vs_shirt-hur-shots256-seed3] update  40/500  train_loss=0.5862  val_loss=0.6530  best_val=0.6478  no_improve=1  t=10074s
+[coat_vs_shirt-hur-shots256-seed3] update  50/500  train_loss=0.6205  val_loss=0.6469  best_val=0.6469  no_improve=0  t=12614s
+[coat_vs_shirt-hur-shots256-seed3] update  60/500  train_loss=0.6815  val_loss=0.6348  best_val=0.6348  no_improve=0  t=15147s
+[coat_vs_shirt-hur-shots256-seed3] update  70/500  train_loss=0.6735  val_loss=0.6343  best_val=0.6343  no_improve=0  t=17688s
+[coat_vs_shirt-hur-shots256-seed3] update  80/500  train_loss=0.6260  val_loss=0.6329  best_val=0.6329  no_improve=0  t=20226s
+[coat_vs_shirt-hur-shots256-seed3] update  90/500  train_loss=0.6499  val_loss=0.6301  best_val=0.6301  no_improve=0  t=22768s
+[coat_vs_shirt-hur-shots256-seed3] update 100/500  train_loss=0.6392  val_loss=0.6298  best_val=0.6298  no_improve=0  t=25318s
+[coat_vs_shirt-hur-shots256-seed3] update 110/500  train_loss=0.6298  val_loss=0.6293  best_val=0.6293  no_improve=0  t=27874s
+[coat_vs_shirt-hur-shots256-seed3] update 120/500  train_loss=0.6658  val_loss=0.6271  best_val=0.6271  no_improve=0  t=30410s
+[coat_vs_shirt-hur-shots256-seed3] update 130/500  train_loss=0.6487  val_loss=0.6248  best_val=0.6248  no_improve=0  t=32949s
+[coat_vs_shirt-hur-shots256-seed3] update 140/500  train_loss=0.6369  val_loss=0.6196  best_val=0.6196  no_improve=0  t=35493s
+[coat_vs_shirt-hur-shots256-seed3] update 150/500  train_loss=0.5403  val_loss=0.6222  best_val=0.6196  no_improve=1  t=38027s
+[coat_vs_shirt-hur-shots256-seed3] update 160/500  train_loss=0.5956  val_loss=0.6256  best_val=0.6196  no_improve=2  t=40562s
+[coat_vs_shirt-hur-shots256-seed3] update 170/500  train_loss=0.5658  val_loss=0.6199  best_val=0.6196  no_improve=3  t=43092s
+[coat_vs_shirt-hur-shots256-seed3] update 180/500  train_loss=0.6463  val_loss=0.6169  best_val=0.6169  no_improve=0  t=45620s
+[coat_vs_shirt-hur-shots256-seed3] update 190/500  train_loss=0.7115  val_loss=0.6171  best_val=0.6169  no_improve=1  t=48162s
+[coat_vs_shirt-hur-shots256-seed3] update 200/500  train_loss=0.5752  val_loss=0.6149  best_val=0.6149  no_improve=0  t=50694s
+[coat_vs_shirt-hur-shots256-seed3] update 210/500  train_loss=0.5930  val_loss=0.6155  best_val=0.6149  no_improve=1  t=53213s
+[coat_vs_shirt-hur-shots256-seed3] update 220/500  train_loss=0.7040  val_loss=0.6177  best_val=0.6149  no_improve=2  t=55744s
+[coat_vs_shirt-hur-shots256-seed3] update 230/500  train_loss=0.6917  val_loss=0.6179  best_val=0.6149  no_improve=3  t=58273s
+[coat_vs_shirt-hur-shots256-seed3] update 240/500  train_loss=0.6158  val_loss=0.6200  best_val=0.6149  no_improve=4  t=60802s
+[coat_vs_shirt-hur-shots256-seed3] update 250/500  train_loss=0.6192  val_loss=0.6185  best_val=0.6149  no_improve=5  t=63327s
+[coat_vs_shirt-hur-shots256-seed3] Early stopping en la actualización 250 (paciencia=5 chequeos, delta=0.0001).
+[coat_vs_shirt-hur-shots256-seed3] test_acc=0.6960  (t=228056s / 63.3h acumulado)
+[coat_vs_shirt-hur-shots256-seed4] update  10/500  train_loss=0.6422  val_loss=0.6912  best_val=0.6912  no_improve=0  t=2532s
+[coat_vs_shirt-hur-shots256-seed4] update  20/500  train_loss=0.6840  val_loss=0.6720  best_val=0.6720  no_improve=0  t=5077s
+[coat_vs_shirt-hur-shots256-seed4] update  30/500  train_loss=0.6542  val_loss=0.6651  best_val=0.6651  no_improve=0  t=7625s
+[coat_vs_shirt-hur-shots256-seed4] update  40/500  train_loss=0.6387  val_loss=0.6694  best_val=0.6651  no_improve=1  t=10161s
+[coat_vs_shirt-hur-shots256-seed4] update  50/500  train_loss=0.6587  val_loss=0.6515  best_val=0.6515  no_improve=0  t=12687s
+[coat_vs_shirt-hur-shots256-seed4] update  60/500  train_loss=0.6347  val_loss=0.6398  best_val=0.6398  no_improve=0  t=15219s
+[coat_vs_shirt-hur-shots256-seed4] update  70/500  train_loss=0.5568  val_loss=0.6264  best_val=0.6264  no_improve=0  t=17756s
+[coat_vs_shirt-hur-shots256-seed4] update  80/500  train_loss=0.5860  val_loss=0.6188  best_val=0.6188  no_improve=0  t=20275s
+[coat_vs_shirt-hur-shots256-seed4] update  90/500  train_loss=0.5751  val_loss=0.6128  best_val=0.6128  no_improve=0  t=22807s
+[coat_vs_shirt-hur-shots256-seed4] update 100/500  train_loss=0.5612  val_loss=0.6105  best_val=0.6105  no_improve=0  t=25333s
+[coat_vs_shirt-hur-shots256-seed4] update 110/500  train_loss=0.6186  val_loss=0.5986  best_val=0.5986  no_improve=0  t=27862s
+[coat_vs_shirt-hur-shots256-seed4] update 120/500  train_loss=0.5601  val_loss=0.6013  best_val=0.5986  no_improve=1  t=30386s
+[coat_vs_shirt-hur-shots256-seed4] update 130/500  train_loss=0.6994  val_loss=0.5986  best_val=0.5986  no_improve=2  t=32922s
+[coat_vs_shirt-hur-shots256-seed4] update 140/500  train_loss=0.6675  val_loss=0.5877  best_val=0.5877  no_improve=0  t=35478s
+[coat_vs_shirt-hur-shots256-seed4] update 150/500  train_loss=0.5791  val_loss=0.5854  best_val=0.5854  no_improve=0  t=38040s
+[coat_vs_shirt-hur-shots256-seed4] update 160/500  train_loss=0.7367  val_loss=0.5850  best_val=0.5850  no_improve=0  t=40567s

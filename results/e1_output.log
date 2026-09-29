@@ -1,0 +1,20 @@
+nohup: ignoring input
+MODELS_TO_RUN: ['hur', 'wei', 'gong']
+experiment_id: E1_FINITE_SHOTS
+canonical_hash: 5547676d7369 
+datasets: ['coat_vs_shirt', '4_vs_9', '1_vs_0']
+models: ['hur', 'wei', 'gong']
+shots_budgets: [256, 1024, 4096]
+run_seeds: [0, 1, 2, 3, 4]
+Estimación basada en costo REAL medido por actualización (cota superior, asume 0 early stopping):
+  3 presupuestos de shots x 5 semillas x 3 datasets x 500 actualizaciones x 3 modelo(s)
+  ~524 h (~21.8 dias) combinado
+
+  hur: ~388.8 h (~16.20 dias)
+  wei: ~3.8 h (~0.16 dias)
+  gong: ~131.2 h (~5.47 dias)
+
+En la practica el early stopping reduce esto algo (la corrida ya completada
+de wei detuvo la mayoria de sus corridas antes de las 500 actualizaciones),
+pero no cambia el orden de magnitud: correr esta matriz completa toma dias,
+no horas, para hur y gong.
